@@ -11,7 +11,7 @@ import java.util.List;
 public class PlayerRepository {
 
     private static final List<Player> ALL_PLAYERS = Arrays.asList(
-            new Player("Ja'mez", "Stopped ice cream in the 6th grade.", 11),
+            new Player("Jamez", "Stopped eating ice cream in the 6th grade.", 11),
             new Player("Brian", "Sunburns easily.", 2),
             new Player("Kareem", "Amateur BBQ pit master.", 3),
             new Player("Christie", "Has 2 pits rescued from the streets.", 4),
