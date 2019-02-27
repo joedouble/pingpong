@@ -4,10 +4,7 @@ package com.detroitlabs.pingpong.data;
 import com.detroitlabs.pingpong.model.Player;
 import org.springframework.stereotype.Component;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 @Component
 public class PlayerRepository {
@@ -31,7 +28,8 @@ public class PlayerRepository {
     }
 
     public List<Player> getByRank(){
-        List<Player> playersToSort = getAllPlayers();
+        List<Player> playersToSort = new ArrayList<>();
+                playersToSort.addAll(getAllPlayers());
 
         Collections.sort(playersToSort, new Comparator<Player>() {
             @Override
