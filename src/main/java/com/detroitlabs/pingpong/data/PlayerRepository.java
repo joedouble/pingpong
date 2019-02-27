@@ -21,15 +21,15 @@ public class PlayerRepository {
             new Player("Nada", "Loves kickboxing.", 8),
             new Player("Omar", "Known as Mr. Sneeze.", 9),
             new Player("Joe", "He's gonna cook you for breakfast but simply.", 10)
-            );
+    );
 
     public List<Player> getAllPlayers() {
         return ALL_PLAYERS;
     }
 
-    public List<Player> getByRank(){
+    public List<Player> getByRank() {
         List<Player> playersToSort = new ArrayList<>();
-                playersToSort.addAll(getAllPlayers());
+        playersToSort.addAll(getAllPlayers());
 
         Collections.sort(playersToSort, new Comparator<Player>() {
             @Override
@@ -39,5 +39,14 @@ public class PlayerRepository {
         });
 
         return playersToSort;
+    }
+
+    public Player findByName(String firstName) {
+        for (Player player : ALL_PLAYERS) {
+            if (player.getFirstName().equalsIgnoreCase(firstName)) {
+                return player;
+            }
+        }
+        return null;
     }
 }

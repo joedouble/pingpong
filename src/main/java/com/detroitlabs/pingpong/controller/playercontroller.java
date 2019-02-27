@@ -5,6 +5,7 @@ import com.detroitlabs.pingpong.model.Player;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -29,4 +30,10 @@ public class playercontroller {
         return "rankings";
     }
 
+    @RequestMapping("/playerdetails/{firstName}")
+    public String playerDetails(@PathVariable String firstName, ModelMap modelMap) {
+        Player foundPlayer = playerRepository.findByName(firstName);
+        modelMap.put("foundPlayer", foundPlayer);
+        return "playerdetails";
+    }
 }

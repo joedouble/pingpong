@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>Portfolio, 2 Column</title>
+    <title>Eta Ping Pong</title>
 
 
     <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
@@ -41,7 +41,6 @@
         </div>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -78,8 +77,8 @@
     <!-- Heading -->
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Portfolio
-                <small>Recent Work</small>
+            <h1 class="page-header">Ping Pong League
+                <small>Players</small>
             </h1>
         </div>
     </div>
@@ -88,7 +87,7 @@
     <!-- Projects Row -->
     <div class="row">
         <div class="col-md-6 portfolio-item" th:each="player : ${allPlayers}">
-            <a href="#">
+            <a th:href="@{'/playerdetails/' + ${player.firstName}}">
                 <img class="img-responsive" th:src="@{'/images/' + ${player.firstName} + '.jpg'}" alt="jpg">
             </a>
             <h3>
