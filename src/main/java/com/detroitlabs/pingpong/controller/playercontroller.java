@@ -23,7 +23,9 @@ public class playercontroller {
     }
 
     @RequestMapping("/rankings")
-    public String displayRankings(){
+    public String displayRankings(ModelMap modelMap){
+        List<Player> sortedPlayers = playerRepository.getByRank();
+        modelMap.put("sortedPlayers", sortedPlayers);
         return "rankings";
     }
 
