@@ -22,4 +22,9 @@ public class playercontroller {
         return "home";
     }
 
+    @RequestMapping("/rankings")
+    public String displayRankings(){
+        return "rankings";
+    }
+
 }
