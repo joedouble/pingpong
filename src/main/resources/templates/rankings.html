@@ -35,12 +35,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">
-                Eta
-            </a>
         </div>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <span class="navbar-brand" href="#">Eta</span>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -91,15 +89,15 @@
                 <img class="img-responsive" th:src="@{'/images/' + ${player.firstName} + '.jpg'}" alt="jpg">
             </a>
             <h3>
-                <a href="#" th:text="${player.firstName}">Player Name</a>
+                <p th:text="${player.firstName}">Player Name</p>
             </h3>
-            <p th:text="${player.playerRanking}">Player Information</p>
+            <p th:text="'Rank: ' + ${player.playerRanking}">Player Information</p>
         </div>
     </div>
     <!-- /.row -->
     <div class="copyright">
         <div class="container">
-            <p>Copyright &copy; Example.com 2015</p>
+            <strong><p>You Ping and I'll Pong.</p></strong>
         </div>
     </div>
 </div>
