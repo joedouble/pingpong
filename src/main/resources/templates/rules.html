@@ -37,13 +37,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" th:href="@{/}">Home <span class="sr-only">(current)</span></a>
+                    <li class="nav-item ">
+                        <a class="nav-link" th:href="@{/}">Home </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" th:href="@{/rankings}">Rankings</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" th:href="@{/rules}">Rules</a>
                     </li>
                     <li class="nav-item">
@@ -67,7 +67,8 @@
     <!-- Heading -->
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header" th:text="${foundPlayer.firstName}">Ping Pong League
+            <h1 class="page-header">Rules
+                <small>of Ping Pong</small>
             </h1>
         </div>
     </div>
@@ -76,8 +77,43 @@
     <!-- Projects Row -->
     <div class="row">
         <div class="col-md-6 portfolio-item">
-                <img class="img-responsive" th:src="@{'/images/' + ${foundPlayer.firstName} + '.jpg'}" alt="jpg">
-            <p th:text="${foundPlayer.playerInfo}">Player Information</p>
+            <h4>Table Tennis Rules</h4>
+
+            <h3>What you need to know to play a fun game of ping-pong</h3>
+
+            <p>Sometimes all you want to know are the basic rules to play a friendly match of ping pong. This section is
+                for you. However if you want the official rules, then read this.</p>
+
+            <p>In singles, the center lines serve no purpose, so ignore them.</p>
+
+            <h3>Scoring</h3>
+
+            <p>A match is played best 3 of 5 games (or 4/7 or 5/9). For each game, the first player to reach 11 points
+                wins that game, however a game must be won by at least a two point margin.</p>
+
+            <p>A point is scored after each ball is put into play (not just when the server wins the point as in volleyball).</p>
+
+            <p>The edges of the table are part of the legal table surface, but not the sides.</p>
+
+            <h3>Flow of the match</h3>
+
+            <p>Each player serves two points in a row and then switch server. However, if a score of 10-10 is reached in
+                any game, then each server serves only one point and then the server is switched. After each game, the
+                players switch side of the table. In the final game (ie 5th game), the players switch side again after
+                either player reaches 5 points.</p>
+
+            <h3>Legal serve</h3>
+
+            <p>The ball must rest on an open hand palm. Then it must be tossed up at least 6 inches and struck so the
+                ball first bounces on the server's side and then the opponent's side.</p>
+
+            <p>If the serve is legal except that it touches the net, it is called a let serve. Let serves are not scored
+                and are reserved.</p>
+
+            <h3>Equipment</h3>
+
+            <p>The paddle should have a red and a black side. The ball should be either orange or white and 40 mm in size.
+                The table should be 2.74 meters long, 1.525 m wide, and 0.76 m high.</p>
         </div>
     </div>
     <!-- /.row -->

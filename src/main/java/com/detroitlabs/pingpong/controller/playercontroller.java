@@ -36,4 +36,9 @@ public class playercontroller {
         modelMap.put("foundPlayer", foundPlayer);
         return "playerdetails";
     }
+
+    @RequestMapping("/rules")
+    public String rules(){
+        return "rules";
+    }
 }

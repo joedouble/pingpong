@@ -10,11 +10,11 @@ import java.util.*;
 public class PlayerRepository {
 
     private static final List<Player> ALL_PLAYERS = Arrays.asList(
-            new Player("Jamez", "Stopped eating ice cream in the 6th grade.", 2),
-            new Player("Brian", "Sunburns easily.", 11),
             new Player("Kareem", "Amateur BBQ pit master.", 3),
             new Player("Christie", "Has 2 pits rescued from the streets.", 4),
+            new Player("Jamez", "Stopped eating ice cream in the 6th grade.", 2),
             new Player("Jamie", "Loves to read horror novels.", 5),
+            new Player("Brian", "Sunburns easily.", 11),
             new Player("Mikayla", "Takes notes.  Be careful what you say around her. :-)", 1),
             new Player("Jordan", "Puns and Dad jokes are his kind of thing.", 6),
             new Player("David", "Bites into string cheese.  He's a monster.", 7),
